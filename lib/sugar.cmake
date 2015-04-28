@@ -15,8 +15,8 @@ include(sugar_include)
 sugar_include(3rdparty)
 sugar_include(inl)
 
-#sugar_include(io)  # these .c files are inlined in ccv_io.c
-#sugar_include(cuda)
+#sugar_include(io)   # these .c files are inlined in ccv_io.c
+#sugar_include(cuda) # don't bother with non portable cuda now
 
 sugar_files(CCV_PUBLIC_HDR ccv.h)
 sugar_files(CCV_PRIVATE_HDR ccv_internal.h)
