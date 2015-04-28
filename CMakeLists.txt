@@ -18,8 +18,10 @@ include(sugar_include)
 
 project(ccv VERSION 0.7)
 
-include_directories(lib/io)
 include_directories(lib)
 
 add_subdirectory(lib)
-add_subdirectory(bin)
+option(CCV_BUILD_EXAMPLES OFF)
+if(CCV_BUILD_EXAMPLES)
+  add_subdirectory(bin)
+endif()
