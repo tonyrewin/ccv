@@ -21,7 +21,6 @@ sugar_files(
     bbffmt.c
     cifar-10.c
     cnnclassify.c
-    convert.c
     dpmcreate.c
     dpmdetect.c
     icfcreate.c
