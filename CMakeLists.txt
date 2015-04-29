@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH})
-
 include("cmake/HunterGate.cmake")
 
 ### Hunter snapshot that will be used ###
