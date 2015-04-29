@@ -8,15 +8,12 @@ HunterGate(
 
 project(ccv VERSION 0.7)
 
-<<<<<<< HEAD
 hunter_add_package(sugar)
 find_package(sugar CONFIG REQUIRED)
 
 include(sugar_files)
 include(sugar_include)
 include(CheckLibraryExists)
-=======
->>>>>>> Added OPTION CCV_BUILD_EXAMPLES (default OFF) for hunter friendly lib only building
 include_directories(lib)
 
 add_subdirectory(lib)
