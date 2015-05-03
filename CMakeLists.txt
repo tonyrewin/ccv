@@ -10,9 +10,9 @@ HunterGate(
 
 ### Import sugar for source collection ###
 hunter_add_package(Sugar)
-message("${SUGAR_ROOT}/cmake/Sugar")
 include("${SUGAR_ROOT}/cmake/Sugar")
 include(sugar_include)
+include(CheckLibraryExists)
 
 project(ccv VERSION 0.7)
 

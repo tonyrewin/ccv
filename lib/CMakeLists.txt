@@ -4,6 +4,12 @@ sugar_include(.)
 
 add_library (ccv ${CCV_SOURCE})
 
+# Some platforms (e.g. Linux) need separate math library
+check_library_exists(m pow "" LIB_M_REQUIRED)
+if(LIB_M_REQUIRED)
+  target_link_libraries(ccv PRIVATE m)
+endif()
+
 # install
 set(generated_dir "${CMAKE_CURRENT_BINARY_DIR}/generated")
 
