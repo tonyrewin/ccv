@@ -15,7 +15,8 @@ include(sugar_include)
 #sugar_include(cuda)
 
 sugar_files(
-    CCV_BIN_SOURCE
+  CCV_BIN_SOURCE
+    aflw.c
     bbfcreate.c
     bbfdetect.c
     bbffmt.c

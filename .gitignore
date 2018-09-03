@@ -31,3 +31,6 @@ tool/*
 config.mk
 build
 site/_site
+_builds
+_logs
+CMakeFiles

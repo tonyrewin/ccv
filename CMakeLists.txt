@@ -1,21 +1,19 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.2)
 
 include("cmake/HunterGate.cmake")
-
-### Hunter snapshot that will be used ###
 HunterGate(
-    URL "https://github.com/ruslo/hunter/archive/v0.8.13.tar.gz"
-    SHA1 "7103f0ab481523ca93a06c1c55abcd56741d3a97"
+    URL "https://github.com/ruslo/hunter/archive/v0.23.26.tar.gz"
+    SHA1 "dffc6269efd60e79ea2e28a927cce94d3e4a6e03"
 )
-
-### Import sugar for source collection ###
-hunter_add_package(Sugar)
-include("${SUGAR_ROOT}/cmake/Sugar")
-include(sugar_include)
-include(CheckLibraryExists)
 
 project(ccv VERSION 0.7)
 
+hunter_add_package(sugar)
+find_package(sugar CONFIG REQUIRED)
+
+include(sugar_files)
+include(sugar_include)
+include(CheckLibraryExists)
 include_directories(lib)
 
 add_subdirectory(lib)
