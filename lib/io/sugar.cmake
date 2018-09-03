@@ -3,18 +3,19 @@
 # see wiki for more info:
 #   https://github.com/ruslo/sugar/wiki/Collecting-sources
 
-if(DEFINED SUGAR_CMAKE_)
+if(DEFINED LIB_IO_SUGAR_CMAKE_)
   return()
 else()
-  set(SUGAR_CMAKE_ 1)
+  set(LIB_IO_SUGAR_CMAKE_ 1)
 endif()
 
 include(sugar_files)
-include(sugar_include)
 
-sugar_include(bin)
-sugar_include(lib)
-#sugar_include(samples)
-sugar_include(serve)
-#sugar_include(test)
-
+sugar_files(
+    CCV_SOURCE
+    _ccv_io_bmp.c
+    _ccv_io_libpng.c
+    _ccv_io_binary.c
+    _ccv_io_libjpeg.c
+    _ccv_io_raw.c
+)

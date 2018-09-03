@@ -29,6 +29,7 @@ sugar_files(
     ccv_classic.c
     ccv_convnet.c
     ccv_daisy.c
+    ccv_doxygen.h
     ccv_dpm.c
     ccv_ferns.c
     ccv_icf.c
