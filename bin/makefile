@@ -6,7 +6,7 @@ CFLAGS := -O3 -Wall -I"../lib" $(CFLAGS)
 
 TARGETS = bbffmt msermatch siftmatch bbfcreate bbfdetect scdcreate scddetect swtcreate swtdetect dpmcreate dpmdetect tld icfcreate icfdetect icfoptimize cifar-10 image-net cnnclassify aflw
 
-all: libccv.a $(TARGETS) .gitignore
+all: libccv.a $(TARGETS)
 
 clean:
 	${MAKE} clean -C ../lib ; rm -f *.o $(TARGETS)
@@ -19,6 +19,3 @@ libccv.a:
 
 %.o: %.c ../lib/ccv.h
 	$(CC) $< -o $@ -c $(CFLAGS)
-
-.gitignore:
-	echo $(TARGETS) | tr ' ' '\n' > .gitignore
