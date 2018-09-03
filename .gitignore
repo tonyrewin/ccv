@@ -19,6 +19,7 @@ bin/*.jpg
 bin/*.samples
 bin/*.png
 bin/*.tex
+bin/*.txt
 bin/*.dat
 bin/*.bin
 bin/*.json
